@@ -1,3 +1,4 @@
-import LinkedinLogin from "./component/LinkedinLogin";
+import LinkedinButton from "./components/LinkedinButton";
+import LinkedinPage from "./page/LinkedinPage";
 
-export {LinkedinLogin};
+export { LinkedinButton, LinkedinPage };
