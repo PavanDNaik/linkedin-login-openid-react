@@ -6,4 +6,4 @@ tsconfig.json
 .env
 .env.example
 rollup.config.js
-app/
+test-app/

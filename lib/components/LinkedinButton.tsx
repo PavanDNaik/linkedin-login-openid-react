@@ -1,8 +1,5 @@
 import { DEFAULT_IMAGE_URL, LINKEDIN_AUTHCODE_URL } from "../utils/constant";
-import {
-  getCompleteRedirectUrl,
-  prepareAuthorizationURL,
-} from "../utils/scripts/authcodeReq";
+import { prepareAuthorizationURL } from "../utils/scripts/authcodeReq";
 import { LinkedinButtonProps } from "../utils/types/propTypes";
 
 function LinkedinButton({
@@ -17,7 +14,7 @@ function LinkedinButton({
       <a href={url}>
         <img
           src={imgUrl ? imgUrl : DEFAULT_IMAGE_URL}
-          alt=""
+          alt="Login_Image"
           srcSet={DEFAULT_IMAGE_URL}
         />
       </a>
