@@ -43,11 +43,15 @@ Add the `LinkedinButton` component to your page. You must provide the `client_id
 <LinkedinButton
     client_id={env.VITE_APP_LINKEDIN_CLIENT_ID}
     redirect_url={env.VITE_APP_REDIRECT_URI}
+    imgUrl="https://example.com/custom-image.png"
+    permissions={["openid", "profile"]}
 />
 ```
 
 - **`client_id`**: Your LinkedIn app's Client ID (retrieved from the Developer Portal).
 - **`redirect_url`**: A user-defined redirect URL to handle the authentication response.
+- **`imgUrl`** (optional): URL to a custom image to be displayed on the button.
+- **`permissions`** (optional): Array of permissions to request from LinkedIn. Possible values are `"openid"`, `"profile"`, and `"email"`. By default, all three are included.
 
 ### Step 3: Create a Route to Capture the Auth Code
 
@@ -97,10 +101,12 @@ If you wish to handle the authorization code manually, you can find it in `sessi
 ## Props Reference
 
 ### `LinkedinButton`
-| Prop           | Type     | Required | Description                               |
-|----------------|----------|----------|-------------------------------------------|
-| `client_id`    | `string` | Yes      | The Client ID from LinkedIn Developer App |
-| `redirect_url` | `string` | Yes      | The redirect URL for authentication       |
+| Prop           | Type            | Required | Description                                                                 |
+|----------------|-----------------|----------|-----------------------------------------------------------------------------|
+| `client_id`    | `string`        | Yes      | The Client ID from LinkedIn Developer App                                  |
+| `redirect_url` | `string`        | Yes      | The redirect URL for authentication                                        |
+| `imgUrl`       | `string`        | No       | URL to a custom image to display on the button                             |
+| `permissions`  | `Array<string>` | No       | Permissions to request (`"openid"`, `"profile"`, `"email"`). Defaults to all three. |
 
 ### `LinkedinPage`
 | Prop           | Type     | Required | Description                                                                                   |
